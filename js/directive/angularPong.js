@@ -1,4 +1,5 @@
 (function () {
+"use strict";
     var KEY = {
 	    UP: 38,
 	    DOWN: 40,
@@ -23,7 +24,7 @@
                     directionY: 1
                 }
 
-                monitorKeys = function () {
+                function monitorKeys() {
                     $document.keydown(function (e) {
                         Keys[e.keyCode] = true;
                     });
@@ -32,7 +33,7 @@
                     });
                 };
 
-                moveBall = function () {
+                function moveBall() {
                     // get ball and playground details
                     var ballTop = parseInt(element.find("#ball").css("top"));
                     var ballLeft = parseInt(element.find("#ball").css("left"));
@@ -113,7 +114,7 @@
                     });
                 };
 
-                movePaddles = function () {
+                function movePaddles() {
                     // check if a key is pressed. 
                     if (Keys[KEY.UP]) // arrow up
                     {
@@ -145,12 +146,12 @@
                     $interval.cancel(timeoutId);
                 });
 
-                gameloop = function () {
+                function gameloop() {
                     moveBall();
                     movePaddles();
                 };
 
-                setTimer = function (func) {
+                function setTimer(func) {
                     $interval(func, 30);
                 };
 
