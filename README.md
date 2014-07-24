@@ -6,7 +6,7 @@ A Pong game using AngularJS.  The game is implemented as an AngularJS directive 
 In index.html, you will see the HTML tag 
 
 <script type="text/plain">
-  <angular-pong/> 
+  &lt;angular-pong&gt;
 </script>
 
 
