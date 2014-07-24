@@ -12,6 +12,7 @@
         return {
             restrict: 'E',
             replace: true,
+	    scope: {},
             templateUrl: 'template/pingpong.html',
             link: function (scope, element, attrs) {
                 var timeoutId;
