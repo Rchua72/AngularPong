@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ping Pong</title>
+    <style>
+        #playground {
+            background: #e0ffe0;
+            width: 400px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #ball {
+            background: #fbb;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 150px;
+            top: 100px;
+            border-radius: 10px;
+        }
+
+        .paddle {
+            background: #bbf;
+            left: 50px;
+            top: 70px;
+            position: absolute;
+            width: 30px;
+            height: 70px;
+        }
+
+        #paddleB {
+            left: 320px;
+        }
+
+        .textcenterd {
+            text-align: center;
+        }
+    </style>
+</head>
+<body data-ng-app="pingpong">
+    <div class="textcenterd">
+	    <header>
+			    <h1>Ping Pong</h1>
+	    </header>
+        <angular-pong />
+	    <footer>
+		    This is an example to show basic control of Ping Pong.
+	    </footer>
+    </div>
+	
+	<script src="js/jquery-2.1.0.min.js"></script>	
+    <script src="js/angular.min.js"></script>	
+	<script src="js/directive/angularPong.js"></script>
+</body>
+</html>
